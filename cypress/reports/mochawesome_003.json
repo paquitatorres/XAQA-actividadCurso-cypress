@@ -1,0 +1,185 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-02T19:06:45.909Z",
+    "end": "2026-06-02T19:06:52.984Z",
+    "duration": 7075,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "39b71653-6d93-4b67-a510-bbcf73281359",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login exitoso con usuario estándar",
+              "fullTitle": "Login Login exitoso con usuario estándar",
+              "timedOut": null,
+              "duration": 1641,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"standard_user\", \"secret_sauce\");\ncy.url().should('include', '/inventory.html');\ncy.get('.app_logo').should('be.visible').should('have.text', 'Swag Labs');",
+              "err": {},
+              "uuid": "9f759213-ccb0-42f0-b8d7-c5e340d59986",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login con contraseña incorrecta",
+              "fullTitle": "Login Login con contraseña incorrecta",
+              "timedOut": null,
+              "duration": 977,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"standard_user\", \"12345\");\n_loginPage.default.errorMensagge().should('be.visible').and('contain', 'Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "bbd31d84-90c6-4bf3-b716-31e025005194",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login con campos vacíos",
+              "fullTitle": "Login Login con campos vacíos",
+              "timedOut": null,
+              "duration": 1312,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.loginusuariovacio();\n_loginPage.default.errorMensagge().should('be.visible').and('contain', 'Username is required');",
+              "err": {},
+              "uuid": "2b0ecc34-9c80-4e9d-9ab9-0eb182d44474",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login con usuario bloqueado",
+              "fullTitle": "Login Login con usuario bloqueado",
+              "timedOut": null,
+              "duration": 1130,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"locked_out_user\", \"secret_sauce\");\n_loginPage.default.errorMensagge().should('be.visible').and('contain', 'Sorry, this user has been locked out.');",
+              "err": {},
+              "uuid": "bf016bad-877d-4dd7-8fab-d3c3eae9e8b3",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logout desde el menú hamburguesa",
+              "fullTitle": "Login Logout desde el menú hamburguesa",
+              "timedOut": null,
+              "duration": 1618,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"standard_user\", \"secret_sauce\");\n_homePage.default.logout();\ncy.url().should('include', '/');",
+              "err": {},
+              "uuid": "f06cdf0f-9863-4c8b-b161-99cdc1635368",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f759213-ccb0-42f0-b8d7-c5e340d59986",
+            "bbd31d84-90c6-4bf3-b716-31e025005194",
+            "2b0ecc34-9c80-4e9d-9ab9-0eb182d44474",
+            "bf016bad-877d-4dd7-8fab-d3c3eae9e8b3",
+            "f06cdf0f-9863-4c8b-b161-99cdc1635368"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6678,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "reportTitle": "Reporte de Tests Automatizados",
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

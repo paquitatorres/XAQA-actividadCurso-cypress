@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-02T19:06:31.578Z",
+    "end": "2026-06-02T19:06:37.333Z",
+    "duration": 5755,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0835ec94-d1b4-42a2-9f51-472e9471bdfa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\checkout.cy.js",
+      "file": "cypress\\e2e\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ce55cb0a-7daf-43a5-a686-f96213f75532",
+          "title": "Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Completar checkout con datos válidos",
+              "fullTitle": "Checkout Completar checkout con datos válidos",
+              "timedOut": null,
+              "duration": 2910,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.seleccionarElPrimerProducto();\n_homePage.default.irAlCarrito();\n_carritoPage.default.irAlCheckout();\n_checkoutPage.default.completarCheckout('Juan', 'Peréz', '5000');\n_checkoutPage.default.confirmarCheckout('Thank you for your order!');",
+              "err": {},
+              "uuid": "225f2198-dd50-4275-b2dd-d832f503eee3",
+              "parentUUID": "ce55cb0a-7daf-43a5-a686-f96213f75532",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout sin completar campos obligatorios",
+              "fullTitle": "Checkout Checkout sin completar campos obligatorios",
+              "timedOut": null,
+              "duration": 2716,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.seleccionarElPrimerProducto();\n_homePage.default.irAlCarrito();\n_carritoPage.default.irAlCheckout();\n_checkoutPage.default.continuarConCamposVacios();\n_checkoutPage.default.continuarConCamposVacios();\n_checkoutPage.default.mensajeErrorCheckout('Error: First Name is required');",
+              "err": {},
+              "uuid": "8437a565-7f01-4334-8e4f-2523a358ad51",
+              "parentUUID": "ce55cb0a-7daf-43a5-a686-f96213f75532",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "225f2198-dd50-4275-b2dd-d832f503eee3",
+            "8437a565-7f01-4334-8e4f-2523a358ad51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5626,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "reportTitle": "Reporte de Tests Automatizados",
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

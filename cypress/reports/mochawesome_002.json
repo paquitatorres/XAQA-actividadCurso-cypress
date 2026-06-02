@@ -1,0 +1,128 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-06-02T19:06:40.071Z",
+    "end": "2026-06-02T19:06:42.982Z",
+    "duration": 2911,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "509df1eb-f99b-467f-abb3-9d54e013bd8a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\inventario.cy.js",
+      "file": "cypress\\e2e\\inventario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d1e69fd-fff2-4800-8bab-c808916cadf2",
+          "title": "Inventário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar cantidad de productos en inventario",
+              "fullTitle": "Inventário Verificar cantidad de productos en inventario",
+              "timedOut": null,
+              "duration": 1556,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\ncy.log('Cantidad de productos en inventario:', _homePage.default.productsCount());",
+              "err": {},
+              "uuid": "95796a41-e426-4e19-a781-2eab867ed644",
+              "parentUUID": "9d1e69fd-fff2-4800-8bab-c808916cadf2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordenar productos por precio (menor a mayor)",
+              "fullTitle": "Inventário Ordenar productos por precio (menor a mayor)",
+              "timedOut": null,
+              "duration": 1212,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.ApplyFilterPriceLowToHigh();\n_homePage.default.confirmarPrecioMenorMayor();",
+              "err": {},
+              "uuid": "562e7fbd-845b-4ddd-b02f-840c94c587ca",
+              "parentUUID": "9d1e69fd-fff2-4800-8bab-c808916cadf2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "95796a41-e426-4e19-a781-2eab867ed644",
+            "562e7fbd-845b-4ddd-b02f-840c94c587ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2768,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "reportTitle": "Reporte de Tests Automatizados",
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

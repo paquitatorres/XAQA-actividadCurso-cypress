@@ -1,0 +1,32 @@
+{
+  "name": "xaqa-actividadcurso-cypress",
+  "version": "1.0.0",
+  "description": "Actividad de cobertura de casos de pruebas del curso de XAcademy QA Automation",
+  "main": "index.js",
+  "scripts": {
+        "cypress:run": "cypress run",
+    "cypress:open": "cypress open",
+    "report:merge": "mochawesome-merge \"cypress/reports/mochawesome*.json\" > cypress/reports/merged-report.json",
+    "report:generate": "node cypress/scripts/generate-report.js",
+    "test:full": "npm run cypress:run && npm run report:generate",
+    "clean:reports": "rm -rf cypress/reports/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paquitatorres/XAQA-actividadCurso-cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/paquitatorres/XAQA-actividadCurso-cypress/issues"
+  },
+  "homepage": "https://github.com/paquitatorres/XAQA-actividadCurso-cypress#readme",
+  "devDependencies": {
+    "cypress": "^15.16.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.1.1",
+    "mochawesome-report-generator": "^6.3.2"
+  }
+}

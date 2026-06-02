@@ -1,0 +1,7 @@
+Notas sobre cambios en el proyecto : 
+
+- se Agrega Mochaaweson para crear reportes 
+  
+
+-cypress.config.js se agrega la url Base 
+

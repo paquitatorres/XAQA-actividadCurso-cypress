@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-06-02T19:06:18.187Z",
+    "end": "2026-06-02T19:06:28.945Z",
+    "duration": 10758,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bcc0d832-fb1f-49ca-bd97-48fab67bec1d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\carrito.cy.js",
+      "file": "cypress\\e2e\\carrito.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+          "title": "Carrito",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agregar un producto al carrito",
+              "fullTitle": "Carrito Agregar un producto al carrito",
+              "timedOut": null,
+              "duration": 3090,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.seleccionarElPrimerProducto();\n_homePage.default.checkCarritoCreado();",
+              "err": {},
+              "uuid": "78d9fe40-ec09-45e7-af3d-e895df67dd2b",
+              "parentUUID": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar múltiples productos y verificar contador",
+              "fullTitle": "Carrito Agregar múltiples productos y verificar contador",
+              "timedOut": null,
+              "duration": 1654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\ncy.fixture('productsData').then(data => {\n  data.productos.forEach(producto => {\n    _homePage.default.agregarProducto(producto.nombre);\n  });\n});\n_homePage.default.irAlCarrito();\n_carritoPage.default.contarProductosEnCarrito().should('eq', 3);",
+              "err": {},
+              "uuid": "4afa8ccc-1941-4e7e-842d-584aef0e53cd",
+              "parentUUID": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar un producto desde la página del carrito",
+              "fullTitle": "Carrito Eliminar un producto desde la página del carrito",
+              "timedOut": null,
+              "duration": 5804,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.agregarDosProductosAlCarrito();\n_homePage.default.irAlCarrito();\n_carritoPage.default.eliminarProducto();\n_carritoPage.default.contarProductosEnCarrito().should('eq', 1);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.contains(button, Add to cart)",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.contains(button, Add to cart)\n    at homePage.agregarDosProductosAlCarrito (webpack://xaqa-actividadcurso-cypress/./cypress/pages/homePage.js:104:32)\n    at Context.eval (webpack://xaqa-actividadcurso-cypress/./cypress/e2e/carrito.cy.js:27:13)",
+                "diff": null
+              },
+              "uuid": "64f2e6a3-85a1-4cb6-a8c4-a99b15377b12",
+              "parentUUID": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78d9fe40-ec09-45e7-af3d-e895df67dd2b",
+            "4afa8ccc-1941-4e7e-842d-584aef0e53cd"
+          ],
+          "failures": [
+            "64f2e6a3-85a1-4cb6-a8c4-a99b15377b12"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10548,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "reportTitle": "Reporte de Tests Automatizados",
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}

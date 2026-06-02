@@ -1,0 +1,440 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 12,
+    "passes": 11,
+    "pending": 0,
+    "failures": 1,
+    "testsRegistered": 12,
+    "passPercent": 91.66666666666667,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-06-02T19:06:18.187Z",
+    "end": "2026-06-02T19:06:52.984Z",
+    "duration": 34797
+  },
+  "results": [
+    {
+      "uuid": "0835ec94-d1b4-42a2-9f51-472e9471bdfa",
+      "title": "",
+      "fullFile": "cypress\\e2e\\checkout.cy.js",
+      "file": "cypress\\e2e\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ce55cb0a-7daf-43a5-a686-f96213f75532",
+          "title": "Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Completar checkout con datos válidos",
+              "fullTitle": "Checkout Completar checkout con datos válidos",
+              "timedOut": null,
+              "duration": 2910,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.seleccionarElPrimerProducto();\n_homePage.default.irAlCarrito();\n_carritoPage.default.irAlCheckout();\n_checkoutPage.default.completarCheckout('Juan', 'Peréz', '5000');\n_checkoutPage.default.confirmarCheckout('Thank you for your order!');",
+              "err": {},
+              "uuid": "225f2198-dd50-4275-b2dd-d832f503eee3",
+              "parentUUID": "ce55cb0a-7daf-43a5-a686-f96213f75532",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Checkout sin completar campos obligatorios",
+              "fullTitle": "Checkout Checkout sin completar campos obligatorios",
+              "timedOut": null,
+              "duration": 2716,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.seleccionarElPrimerProducto();\n_homePage.default.irAlCarrito();\n_carritoPage.default.irAlCheckout();\n_checkoutPage.default.continuarConCamposVacios();\n_checkoutPage.default.continuarConCamposVacios();\n_checkoutPage.default.mensajeErrorCheckout('Error: First Name is required');",
+              "err": {},
+              "uuid": "8437a565-7f01-4334-8e4f-2523a358ad51",
+              "parentUUID": "ce55cb0a-7daf-43a5-a686-f96213f75532",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "225f2198-dd50-4275-b2dd-d832f503eee3",
+            "8437a565-7f01-4334-8e4f-2523a358ad51"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5626,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "509df1eb-f99b-467f-abb3-9d54e013bd8a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\inventario.cy.js",
+      "file": "cypress\\e2e\\inventario.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9d1e69fd-fff2-4800-8bab-c808916cadf2",
+          "title": "Inventário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verificar cantidad de productos en inventario",
+              "fullTitle": "Inventário Verificar cantidad de productos en inventario",
+              "timedOut": null,
+              "duration": 1556,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\ncy.log('Cantidad de productos en inventario:', _homePage.default.productsCount());",
+              "err": {},
+              "uuid": "95796a41-e426-4e19-a781-2eab867ed644",
+              "parentUUID": "9d1e69fd-fff2-4800-8bab-c808916cadf2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ordenar productos por precio (menor a mayor)",
+              "fullTitle": "Inventário Ordenar productos por precio (menor a mayor)",
+              "timedOut": null,
+              "duration": 1212,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.ApplyFilterPriceLowToHigh();\n_homePage.default.confirmarPrecioMenorMayor();",
+              "err": {},
+              "uuid": "562e7fbd-845b-4ddd-b02f-840c94c587ca",
+              "parentUUID": "9d1e69fd-fff2-4800-8bab-c808916cadf2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "95796a41-e426-4e19-a781-2eab867ed644",
+            "562e7fbd-845b-4ddd-b02f-840c94c587ca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2768,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "39b71653-6d93-4b67-a510-bbcf73281359",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login exitoso con usuario estándar",
+              "fullTitle": "Login Login exitoso con usuario estándar",
+              "timedOut": null,
+              "duration": 1641,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"standard_user\", \"secret_sauce\");\ncy.url().should('include', '/inventory.html');\ncy.get('.app_logo').should('be.visible').should('have.text', 'Swag Labs');",
+              "err": {},
+              "uuid": "9f759213-ccb0-42f0-b8d7-c5e340d59986",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login con contraseña incorrecta",
+              "fullTitle": "Login Login con contraseña incorrecta",
+              "timedOut": null,
+              "duration": 977,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"standard_user\", \"12345\");\n_loginPage.default.errorMensagge().should('be.visible').and('contain', 'Username and password do not match any user in this service');",
+              "err": {},
+              "uuid": "bbd31d84-90c6-4bf3-b716-31e025005194",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login con campos vacíos",
+              "fullTitle": "Login Login con campos vacíos",
+              "timedOut": null,
+              "duration": 1312,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.loginusuariovacio();\n_loginPage.default.errorMensagge().should('be.visible').and('contain', 'Username is required');",
+              "err": {},
+              "uuid": "2b0ecc34-9c80-4e9d-9ab9-0eb182d44474",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login con usuario bloqueado",
+              "fullTitle": "Login Login con usuario bloqueado",
+              "timedOut": null,
+              "duration": 1130,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"locked_out_user\", \"secret_sauce\");\n_loginPage.default.errorMensagge().should('be.visible').and('contain', 'Sorry, this user has been locked out.');",
+              "err": {},
+              "uuid": "bf016bad-877d-4dd7-8fab-d3c3eae9e8b3",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logout desde el menú hamburguesa",
+              "fullTitle": "Login Logout desde el menú hamburguesa",
+              "timedOut": null,
+              "duration": 1618,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.login(\"standard_user\", \"secret_sauce\");\n_homePage.default.logout();\ncy.url().should('include', '/');",
+              "err": {},
+              "uuid": "f06cdf0f-9863-4c8b-b161-99cdc1635368",
+              "parentUUID": "285bc071-ede7-47c8-b958-05e00fefc7cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9f759213-ccb0-42f0-b8d7-c5e340d59986",
+            "bbd31d84-90c6-4bf3-b716-31e025005194",
+            "2b0ecc34-9c80-4e9d-9ab9-0eb182d44474",
+            "bf016bad-877d-4dd7-8fab-d3c3eae9e8b3",
+            "f06cdf0f-9863-4c8b-b161-99cdc1635368"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6678,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "bcc0d832-fb1f-49ca-bd97-48fab67bec1d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\carrito.cy.js",
+      "file": "cypress\\e2e\\carrito.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+          "title": "Carrito",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Agregar un producto al carrito",
+              "fullTitle": "Carrito Agregar un producto al carrito",
+              "timedOut": null,
+              "duration": 3090,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.seleccionarElPrimerProducto();\n_homePage.default.checkCarritoCreado();",
+              "err": {},
+              "uuid": "78d9fe40-ec09-45e7-af3d-e895df67dd2b",
+              "parentUUID": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Agregar múltiples productos y verificar contador",
+              "fullTitle": "Carrito Agregar múltiples productos y verificar contador",
+              "timedOut": null,
+              "duration": 1654,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\ncy.fixture('productsData').then(data => {\n  data.productos.forEach(producto => {\n    _homePage.default.agregarProducto(producto.nombre);\n  });\n});\n_homePage.default.irAlCarrito();\n_carritoPage.default.contarProductosEnCarrito().should('eq', 3);",
+              "err": {},
+              "uuid": "4afa8ccc-1941-4e7e-842d-584aef0e53cd",
+              "parentUUID": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Eliminar un producto desde la página del carrito",
+              "fullTitle": "Carrito Eliminar un producto desde la página del carrito",
+              "timedOut": null,
+              "duration": 5804,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.entrarAlHome('standard_user', 'secret_sauce');\n_homePage.default.agregarDosProductosAlCarrito();\n_homePage.default.irAlCarrito();\n_carritoPage.default.eliminarProducto();\n_carritoPage.default.contarProductosEnCarrito().should('eq', 1);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.contains(button, Add to cart)",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `1`, but never found it. Queried from:\n\n              > cy.contains(button, Add to cart)\n    at homePage.agregarDosProductosAlCarrito (webpack://xaqa-actividadcurso-cypress/./cypress/pages/homePage.js:104:32)\n    at Context.eval (webpack://xaqa-actividadcurso-cypress/./cypress/e2e/carrito.cy.js:27:13)",
+                "diff": null
+              },
+              "uuid": "64f2e6a3-85a1-4cb6-a8c4-a99b15377b12",
+              "parentUUID": "c2dc5102-9cdf-4a09-9178-5557e94749ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "78d9fe40-ec09-45e7-af3d-e895df67dd2b",
+            "4afa8ccc-1941-4e7e-842d-584aef0e53cd"
+          ],
+          "failures": [
+            "64f2e6a3-85a1-4cb6-a8c4-a99b15377b12"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10548,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "charts": true,
+        "reportTitle": "Reporte de Tests Automatizados",
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.3.2"
+    }
+  }
+}
