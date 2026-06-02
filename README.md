@@ -22,3 +22,11 @@ Se incluye el reporte de los test con Mochawesome
 
 
 
+
+
+YO en clases : 
+
+<img width="1200" height="630" alt="YO EN EL kahoot" src="https://github.com/user-attachments/assets/521b21d3-a8b9-44b8-9862-52ff19c279ae" />
+
+
+
