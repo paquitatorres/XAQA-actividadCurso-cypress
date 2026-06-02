@@ -12,6 +12,8 @@ https://drive.google.com/file/d/1Vc2H9J2SLMoC1jN6dKKAbxsOg9tUvAUv/view
 
 Tanto Issues de este repositorio como en trello: 
 
+https://trello.com/invite/b/6a1f2f77f54f6457bd4f7dd4/ATTIf45a3452fb2a4b9d59cd8d0bf8de1e818B582281/fallas
+
 Se incluye el reporte de los test con Mochawesome 
 
 <img width="1341" height="460" alt="Captura de pantalla 2026-06-02 161933" src="https://github.com/user-attachments/assets/7442d0d2-a814-4755-bc25-5115f0427c6c" />
